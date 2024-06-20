@@ -44,22 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Register the service worker
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/service-worker.js").then(
-        (registration) => {
-          console.log(
-            "ServiceWorker registration successful with scope: ",
-            registration.scope
-          );
-        },
-        (err) => {
-          console.log("ServiceWorker registration failed: ", err);
-        }
-      );
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/timetableapp/service-worker.js')
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
     });
   }
-});
+  
 
 function showDay(day) {
   const days = document.querySelectorAll(".day");
