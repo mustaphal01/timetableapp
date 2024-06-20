@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+  color: #343a40;
+}
+
+.class-item {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.class-details {
+  flex: 1;
+}
+
+.class-actions {
+  margin-left: 15px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.add-class-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-class-form input, .add-class-form select {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: calc(100% - 22px);
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #343a40;
+  font-family: Arial, sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.add-class-form select {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23443" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 10px;
+}
+
+.add-class-form select:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+.add-class-btn, .toggle-form-btn, .close-btn, #see-rest-btn {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.add-class-btn:hover, .toggle-form-btn:hover, .close-btn:hover, #see-rest-btn:hover {
+  background-color: #218838;
+}
+
+/* Add styles for the day buttons and containers */
+.day-selector {
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.day-selector button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 15px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: default;
+  font-size: 16px;
+}
+
+.day-selector button.active {
+  background-color: #0056b3;
+}
+
+#date-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#day-name, #date {
+  font-size: 1.2em;
+  color: #333;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.ac-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap between buttons if needed */
+}
+
+.day {
+  /* display: none; */
+}
+
+/* Centralize the #see-rest-btn button */
+#see-rest-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
